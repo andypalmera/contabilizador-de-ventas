@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+/* ===== estilos header==== */
+.header {
+    background-color: #bd645b;
+    height: auto;
+}
+.container {
+    text-align: center;
+}
+.header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.header-icon {
+    font-size: 60px;
+    padding: 20px;
+}
+.header-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 80px;
+}
+/* ===== estilos Form Nueva Venta ==== */
+.form-container {
+    margin-top: 50px;
+    padding: 30px;
+    padding-left: 0;
+    background-color: #c7b854;
+    border-radius: 10px;
+    border: 5px solid rgba(0, 0, 0, 0.52);
+    width: 70%;
+}
+.form-container select {
+    border: none;
+    border-radius: 5px;
+}
+.form-container button {
+    border: none;
+    background-color: #a1a07c;
+    transition: ease, 0.5s;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.form-container button:hover {
+    background-color: #666550;
+    transition: ease, 0.5s;
+}
+.header-form {
+    margin-bottom: 20px;
+}
+/* ===== estilos Listado de Ventas ===== */
+.ventas-container {
+    margin-top: 50px;
+    padding: 30px;
+    padding-left: 0;
+    background-color: #c7b854;
+    border-radius: 10px;
+    border: 5px solid rgba(0, 0, 0, 0.52);
+    width: 70%;
+}
+.ventas li {
+    padding-bottom: 15px;
+}
+.ventas-header {
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+.ventas-header h5 {
+    font-weight: bold;
+}
+
+/* =====estilos informe ventas ===== */
+.results {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    background-color: #c7b854;
+    border-top: 5px solid rgba(0, 0, 0, 0.52);
+}
+.results div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.results h5 {
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.results select {
+    border: none;
+    border-radius: 5px;
+}
