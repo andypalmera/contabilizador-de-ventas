@@ -13,182 +13,194 @@
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossorigin="anonymous"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
-        <title>TP ventas</title>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+        <title>Sales Control App</title>
+        <link rel="icon" href="image/A.jpg">
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <i class="fas fa-network-wired header-icon"></i>
-                <h1 class="header-text">Ok Computers Shop</h1>
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="./image/2170435.jpg" alt="logo" />
+                </div>
+                <div class="title-container">
+                    <h1 class="header-text">Ok Computers Shop</h1>
+                    <p class="slogan">Your solution</p>
+                </div>
             </div>
         </header>
 
-        <div class="container form-container">
-            <h3 class="header-form">Nueva Venta</h3>
-            <form class="nueva-venta-form" id="nueva-venta-form">
-                <div class="container">
-                    <label for="Vendedoras">
-                        <select name="Vendedoras" id="Vendedoras">
-                            <option value="" selected disabled>Seleccione Vendedora</option>
-                            <option value="Ada">Ada</option>
-                            <option value="Grace">Grace</option>
-                            <option value="Hedy">Hedy</option>
-                            <option value="Sheryl">Sheryl</option>
-                        </select>
-                    </label>
+        <div class="container-fluid sections-container">
+            <section class="col-sm-12 col-md-12 col-lg-9 control">
+                <div class="form-container">
+                    <h4 class="header-form">New Sale</h4>
+                    <form class="nueva-venta-form" id="nueva-venta-form">
+                        <div class="container">
+                            <label for="Vendedoras">
+                                <select name="Vendedoras" id="Vendedoras">
+                                    <option value="" selected disabled>Select a Seller</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Grace">Grace</option>
+                                    <option value="Hedy">Hedy</option>
+                                    <option value="Sheryl">Sheryl</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="container selects-flex">
+                            <label for="Componentes">
+                                <select name="Componentes" id="Componentes1">
+                                    <option value="" disabled selected>Select product</option>
+                                    <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+                                    <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+                                    <option value="Monitor ASC 543">Monitor ASC 543</option>
+                                    <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+                                    <option value="Motherboard MZI">Motherboard MZI</option>
+                                    <option value="HDD Toyiva">HDD Toyiva</option>
+                                    <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
+                                    <option value="RAM Quinston">RAM Quinston</option>
+                                    <option value="RAM Quinston Fury">RAM Quinston Fury</option>
+                                </select>
+                                <select name="Componentes" id="Componentes2">
+                                    <option value="" selected disabled>Select product</option>
+
+                                    <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+                                    <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+                                    <option value="Monitor ASC 543">Monitor ASC 543</option>
+                                    <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+                                    <option value="Motherboard MZI">Motherboard MZI</option>
+                                    <option value="HDD Toyiva">HDD Toyiva</option>
+                                    <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
+                                    <option value="RAM Quinston">RAM Quinston</option>
+                                    <option value="RAM Quinston Fury">RAM Quinston Fury</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="container">
+                            <label for="Sucursal">
+                                <select name="Sucursal" id="Sucursal">
+                                    <option value="" selected disabled>Select Branch</option>
+                                    <option value="Centro">Centro</option>
+                                    <option value="Caballito">Caballito</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div id="mesage" class="mesage"></div>
+                    </form>
+                    <button class="agregar-venta" id="agregar-venta" type="submit">
+                        Add Sale
+                    </button>
                 </div>
 
-                <div class="container">
-                    <label for="Componentes">
-                        <select name="Componentes" id="Componentes1">
-                            <option value="" disabled selected>Seleccione producto</option>
-                            <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
-                            <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
-                            <option value="Monitor ASC 543">Monitor ASC 543</option>
-                            <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
-                            <option value="Motherboard MZI">Motherboard MZI</option>
-                            <option value="HDD Toyiva">HDD Toyiva</option>
-                            <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
-                            <option value="RAM Quinston">RAM Quinston</option>
-                            <option value="RAM Quinston Fury">RAM Quinston Fury</option>
-                        </select>
-                        <select name="Componentes" id="Componentes2">
-                            <option value="" selected disabled>Seleccione producto</option>
-
-                            <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
-                            <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
-                            <option value="Monitor ASC 543">Monitor ASC 543</option>
-                            <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
-                            <option value="Motherboard MZI">Motherboard MZI</option>
-                            <option value="HDD Toyiva">HDD Toyiva</option>
-                            <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
-                            <option value="RAM Quinston">RAM Quinston</option>
-                            <option value="RAM Quinston Fury">RAM Quinston Fury</option>
-                        </select>
-                    </label>
+                <div class="ventas-container">
+                    <ul id="ventas" class="ventas table table-striped">
+                        <li class="descripcion row">
+                            <div class="col-md-4">Date</div>
+                            <div class="col-md-2">Seller</div>
+                            <div class="col-md-6">Products</div>
+                        </li>
+                    </ul>
                 </div>
+            </section>
 
-                <div class="container">
-                    <label for="Sucursal">
-                        <select name="Sucursal" id="Sucursal">
-                            <option value="" selected disabled>Seleccione sucursal</option>
+            <!-- ======= informe de ventas ===== -->
+
+            <section class="col-sm-12 col-md-12 col-lg-3 results">
+                <div class="ventas-sucursal-section">
+                    <h5>Sales per branch</h5>
+                    <label for="ventas-sucursal">
+                        Branch
+                        <select name="ventas-sucursal" id="ventas-sucursal">
+                            <option value="" selected disabled>Select Branch</option>
                             <option value="Centro">Centro</option>
                             <option value="Caballito">Caballito</option>
                         </select>
                     </label>
+                    <section class="ventas-sucursal-container total" id="ventas-sucursal-container"><section>
                 </div>
-                <div id="mesage" class="mesage"></div>
-            </form>
-            <button class="agregar-venta" id="agregar-venta" type="submit">
-                Agregar Venta
-            </button>
+                <div class="ventas-mes-section">
+                    <h5>Sales per month</h5>
+                    <label for="ventas-mes">
+                        Month
+                        <select name="ventas-mes" id="ventas-mes">
+                            <option value="" selected disabled>Select Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </label>
+                    <label for="ventas-anio">
+                        Year
+                        <select name="ventas-anio" id="ventas-anio">
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </label>
+                    <section class="ventas-mes-container total" id="ventas-mes-container"></section>
+                </div>
+                <div class="total-vendidos-section">
+                    <h5>Quantity of sold products</h5>
+                    <label for="componentes-vendidos">
+                        Product
+                        <select name="componentes-vendidos" id="componentes-vendidos">
+                            <option value="" disabled selected>Select product</option>
+                            <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+                            <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+                            <option value="Monitor ASC 543">Monitor ASC 543</option>
+                            <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+                            <option value="Motherboard MZI">Motherboard MZI</option>
+                            <option value="HDD Toyiva">HDD Toyiva</option>
+                            <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
+                            <option value="RAM Quinston">RAM Quinston</option>
+                            <option value="RAM Quinston Fury">RAM Quinston Fury</option>
+                        </select>
+                    </label>
+                    <section class='componentes-vendidos-container total' id="componentes-vendidos-container"></section>
+                </div>
+                <div class="vendedora-mes-section">
+                    <h5>Seller of the month</h5>
+                    <label for="meses-vendedora-mes">
+                        Mes
+                        <select name="meses-vendedora-mes" id="meses-vendedora-mes">
+                            <option value="" selected disabled>Select month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </label>
+                    <label for="anio-vendedora-mes">
+                        Year
+                        <select name="anio-vendedora-mes" id="anio-vendedora-mes">
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </label>
+                    <section class="vendedora-del-mes-container total" id="vendedora-del-mes-container"></section>
+                </div>
+            </section>
         </div>
-
-        <section class="container ventas-container">
-            <div class="ventas-header row">
-                <h3 class="col-md-3">Fecha</h3>
-                <h3 class="col-md-4">Vendedora</h3>
-                <h3 class="col-md-5">Productos</h3>
-            </div>
-            <ul id="ventas" class="ventas"></ul>
-        </section>
-
-        <!-- ======= informe de ventas ===== -->
-
-        <section class="container-fluid results">
-            <div class="ventas-sucursal-section">
-                <h5>Total ventas sucursal</h5>
-                <label for="ventas-sucursal">
-                    Sucursal
-                    <select name="ventas-sucursal" id="ventas-sucursal">
-                        <option value="" selected disabled>Seleccione sucursal</option>
-                        <option value="Centro">Centro</option>
-                        <option value="Caballito">Caballito</option>
-                    </select>
-                </label>
-                <div class="ventas-sucursal-container" id="ventas-sucursal-container"></div>
-            </div>
-            <div class="ventas-mes-section">
-                <h5>Total ventas del mes</h5>
-                <label for="ventas-mes">
-                    Mes
-                    <select name="ventas-mes" id="ventas-mes">
-                        <option value="" selected disabled>Seleccione el mes</option>
-                        <option value="1">Enero</option>
-                        <option value="2">Febrero</option>
-                        <option value="3">Marzo</option>
-                        <option value="4">Abril</option>
-                        <option value="5">Mayo</option>
-                        <option value="6">Junio</option>
-                        <option value="7">Julio</option>
-                        <option value="8">Agosto</option>
-                        <option value="9">Septiembre</option>
-                        <option value="10">Octubre</option>
-                        <option value="11">Noviembre</option>
-                        <option value="12">Diciembre</option>
-                    </select>
-                </label>
-                <label for="ventas-anio">
-                    Año
-                    <select name="ventas-anio" id="ventas-anio">
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                    </select>
-                </label>
-                <div class="ventas-mes-container" id="ventas-mes-container"></div>
-            </div>
-            <div class="total-vendidos-section">
-                <h5>Cantidad de Productos vendidos</h5>
-                <label for="componentes-vendidos">
-                    Producto
-                    <select name="componentes-vendidos" id="componentes-vendidos">
-                        <option value="" disabled selected>Seleccione producto</option>
-                        <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
-                        <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
-                        <option value="Monitor ASC 543">Monitor ASC 543</option>
-                        <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
-                        <option value="Motherboard MZI">Motherboard MZI</option>
-                        <option value="HDD Toyiva">HDD Toyiva</option>
-                        <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
-                        <option value="RAM Quinston">RAM Quinston</option>
-                        <option value="RAM Quinston Fury">RAM Quinston Fury</option>
-                    </select>
-                </label>
-                <div id="componentes-vendidos-container"></div>
-            </div>
-            <div class="vendedora-mes-section">
-                <h5>Vendedora del mes</h5>
-                <label for="meses-vendedora-mes">
-                    Mes
-                    <select name="meses-vendedora-mes" id="meses-vendedora-mes">
-                        <option value="" selected disabled>Seleccione el mes</option>
-                        <option value="1">Enero</option>
-                        <option value="2">Febrero</option>
-                        <option value="3">Marzo</option>
-                        <option value="4">Abril</option>
-                        <option value="5">Mayo</option>
-                        <option value="6">Junio</option>
-                        <option value="7">Julio</option>
-                        <option value="8">Agosto</option>
-                        <option value="9">Septiembre</option>
-                        <option value="10">Octubre</option>
-                        <option value="11">Noviembre</option>
-                        <option value="12">Diciembre</option>
-                    </select>
-                </label>
-                <label for="anio-vendedora-mes">
-                    Año
-                    <select name="anio-vendedora-mes" id="anio-vendedora-mes">
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                    </select>
-                </label>
-                <div id="vendedora-del-mes-container"></div>
-            </div>
-        </section>
-
+        <footer>Coded by Andrea Palmera</footer>
         <!-- <ul id="ventas"></ul> -->
 
         <script src="index.js"></script>

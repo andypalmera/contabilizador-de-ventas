@@ -2,56 +2,91 @@
     box-sizing: border-box;
 }
 body {
+    background-color: #e2c750;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    /* background-image: url(./image/mia.jpg); */
+    /* background-image: linear-gradient(#cff075a2, #87975ca2), url(./image/mouse.png); */
+    /* background-repeat: no-repeat; */
 }
 /* ===== estilos header==== */
 .header {
-    background-color: #bd645b;
+    background-color: white;
     height: auto;
 }
-.container {
+.header-container {
     text-align: center;
-}
-.header div {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     text-align: center;
 }
-.header-icon {
-    font-size: 60px;
-    padding: 20px;
+.logo-container {
+    width: 150px;
+}
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+.title-container {
+    display: flex;
+    flex-direction: column;
 }
 .header-text {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px rgb(54, 40, 134);
+    margin: 0;
+}
+.slogan {
+    font-size: 20px;
+    color: rgb(211, 107, 81);
+    text-align: end;
+    margin: 0;
 }
 /* ===== estilos Form Nueva Venta ==== */
+.sections-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    /* margin: none; */
+}
+
 .form-container {
-    margin-top: 50px;
+    margin: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding: 30px;
     padding-left: 0;
-    background-color: #c7b854;
+    background-color: white;
     border-radius: 10px;
-    border: 5px solid rgba(0, 0, 0, 0.52);
-    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.685);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container div {
+    display: flex;
+    justify-content: center;
 }
 .form-container select {
-    border: none;
+    border: rgba(0, 0, 0, 0.582) solid 1px;
     border-radius: 5px;
 }
 .form-container button {
     border: none;
-    background-color: #a1a07c;
+    background-color: #5579c5;
     transition: ease, 0.5s;
     border-radius: 5px;
     padding: 5px 10px;
+    color: white;
+    font-weight: 500;
 }
 .form-container button:hover {
-    background-color: #666550;
+    background-color: #768ec0;
     transition: ease, 0.5s;
 }
 .header-form {
@@ -59,16 +94,24 @@ body {
 }
 /* ===== estilos Listado de Ventas ===== */
 .ventas-container {
-    margin-top: 50px;
+    margin: 50px;
     padding: 30px;
     padding-left: 0;
-    background-color: #c7b854;
+    background-color: white;
     border-radius: 10px;
-    border: 5px solid rgba(0, 0, 0, 0.52);
-    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.685);
+    margin-bottom: 50px;
 }
-.ventas li {
-    padding-bottom: 15px;
+
+.item {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.438);
+}
+.descripcion {
+    font-weight: bold;
+    border-top: none;
+    padding-bottom: 10px;
 }
 .ventas-header {
     margin-left: 40px;
@@ -81,19 +124,20 @@ body {
 /* =====estilos informe ventas ===== */
 .results {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: baseline;
-    padding: 10px;
+    padding: 30px;
     padding-bottom: 20px;
-    margin-top: 40px;
-    background-color: #c7b854;
-    border-top: 5px solid rgba(0, 0, 0, 0.52);
+    background-color: #5579c5;
 }
 .results div {
-    padding: 10px;
+    border-radius: 5px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.685);
 }
 .results h5 {
     font-size: 1.2em;
@@ -101,6 +145,80 @@ body {
     padding-bottom: 15px;
 }
 .results select {
-    border: none;
     border-radius: 5px;
+    width: 80%;
+}
+.total {
+    border-top: rgb(211, 107, 81) solid 2px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+.vendedora-del-mes-container {
+    height: 80px;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}
+label {
+    display: block;
+}
+footer {
+    background-color: rgb(211, 107, 81);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .sections-container {
+        flex-direction: column;
+    }
+    .results {
+        flex-direction: row;
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .descripcion {
+        flex-wrap: nowrap;
+    }
+    .item {
+        flex-wrap: nowrap;
+    }
+    .selects-flex {
+        align-content: center;
+    }
+    .form-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .logo-container {
+        width: 80px;
+    }
+
+    .header-text {
+        font-size: 40px;
+    }
+    .slogan {
+        font-size: 15px;
+        color: rgb(211, 107, 81);
+        text-align: end;
+        margin: 0;
+    }
+}
+@media (max-width: 500px) {
+    .form-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .ventas-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
 }

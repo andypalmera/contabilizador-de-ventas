@@ -2,7 +2,6 @@ var local = {
     vendedoras: ['Ada', 'Grace', 'Hedy', 'Sheryl'],
 
     ventas: [
-        // tener en cuenta que Date guarda los meses del 0 (enero) al 11 (diciembre)
         { id: 1, fecha: new Date(2019, 1, 4), nombreVendedora: 'Grace', sucursal: 'Centro', componentes: ['Monitor GPRS 3000', 'Motherboard ASUS 1500'] },
         { id: 2, fecha: new Date(2019, 0, 1), nombreVendedora: 'Ada', sucursal: 'Centro', componentes: ['Monitor GPRS 3000', 'Motherboard ASUS 1500'] },
         { id: 3, fecha: new Date(2019, 0, 2), nombreVendedora: 'Grace', sucursal: 'Centro', componentes: ['Monitor ASC 543', 'Motherboard MZI'] },
@@ -19,16 +18,6 @@ var local = {
         { id: 8, fecha: new Date(2019, 1, 1), nombreVendedora: 'Ada', sucursal: 'Centro', componentes: ['Motherboard MZI', 'RAM Quinston Fury'] },
         { id: 9, fecha: new Date(2019, 1, 11), nombreVendedora: 'Grace', sucursal: 'Caballito', componentes: ['Monitor ASC 543', 'RAM Quinston'] },
         { id: 10, fecha: new Date(2019, 1, 15), nombreVendedora: 'Ada', sucursal: 'Centro', componentes: ['Motherboard ASUS 1200', 'RAM Quinston Fury'] },
-        { id: 11, fecha: new Date(2019, 1, 12), nombreVendedora: 'Hedy', sucursal: 'Caballito', componentes: ['Motherboard ASUS 1500', 'HDD Toyiva'] },
-        { id: 12, fecha: new Date(2019, 1, 21), nombreVendedora: 'Grace', sucursal: 'Centro', componentes: ['Motherboard MZI', 'RAM Quinston'] },
-        { id: 13, fecha: new Date(2019, 1, 8), nombreVendedora: 'Sheryl', sucursal: 'Centro', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'] },
-        { id: 14, fecha: new Date(2019, 1, 16), nombreVendedora: 'Sheryl', sucursal: 'Centro', componentes: ['Monitor GPRS 3000', 'RAM Quinston Fury'] },
-        { id: 15, fecha: new Date(2019, 1, 27), nombreVendedora: 'Hedy', sucursal: 'Caballito', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'] },
-        { id: 16, fecha: new Date(2019, 1, 22), nombreVendedora: 'Grace', sucursal: 'Centro', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'] },
-        { id: 17, fecha: new Date(2019, 1, 5), nombreVendedora: 'Ada', sucursal: 'Centro', componentes: ['Motherboard ASUS 1500', 'RAM Quinston'] },
-        { id: 18, fecha: new Date(2019, 1, 1), nombreVendedora: 'Grace', sucursal: 'Centro', componentes: ['Motherboard MZI', 'HDD Wezter Dishital'] },
-        { id: 19, fecha: new Date(2019, 1, 7), nombreVendedora: 'Sheryl', sucursal: 'Caballito', componentes: ['Monitor GPRS 3000', 'RAM Quinston'] },
-        { id: 20, fecha: new Date(2019, 1, 14), nombreVendedora: 'Ada', sucursal: 'Centro', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'] },
     ],
 
     precios: [
@@ -50,40 +39,40 @@ var local = {
 const nombreMes = (mes) => {
     switch (mes) {
         case 0:
-            return 'Enero';
+            return 'January';
             break;
         case 1:
-            return 'Febrero';
+            return 'February';
             break;
         case 2:
-            return 'Marzo';
+            return 'March';
             break;
         case 3:
-            return 'Abril';
+            return 'April';
             break;
         case 4:
-            return 'Mayo';
+            return 'May';
             break;
         case 5:
-            return 'Junio';
+            return 'June';
             break;
         case 6:
-            return 'Julio';
+            return 'July';
             break;
         case 7:
-            return 'Agosto';
+            return 'August';
             break;
         case 8:
-            return 'Septiembre';
+            return 'September';
             break;
         case 9:
-            return 'Octubre';
+            return 'October';
             break;
         case 10:
-            return 'Noviembre';
+            return 'November';
             break;
         case 11:
-            return 'Diciembre';
+            return 'December';
             break;
 
         default:
@@ -121,7 +110,7 @@ const cantidadVentasComponente = (componente) => {
 const componentesVendidosId = document.getElementById('componentes-vendidos');
 componentesVendidosId.addEventListener('change', () => {
     const componentesVendidosContainer = document.getElementById('componentes-vendidos-container');
-    componentesVendidosContainer.innerText = 'Total vendidos = ' + cantidadVentasComponente(componentesVendidosId.value);
+    componentesVendidosContainer.innerText = 'Total  = ' + cantidadVentasComponente(componentesVendidosId.value);
 });
 
 const vendedoraDelMes = (mes, anio) => {
@@ -144,9 +133,9 @@ const vendedoraDelMes = (mes, anio) => {
         }
     });
     if (vendedoraDelMes === undefined) {
-        return 'No hubo ventas este mes';
+        return 'No sales on this month';
     } else {
-        return ' La vendedora del mes es ' + vendedoraDelMes + ' y vendio $ ' + mayorVenta;
+        return ' The seller of this month is ' + vendedoraDelMes + ' and sold $ ' + mayorVenta + ',°°';
     }
 };
 
@@ -177,12 +166,12 @@ const ventasAnioId = document.getElementById('ventas-anio');
 ventasMesId.addEventListener('change', () => {
     const VentasMesContainer = document.getElementById('ventas-mes-container');
 
-    VentasMesContainer.innerText = 'Total= $ ' + ventasMes(parseInt(ventasMesId.value), parseInt(ventasAnioId.value));
+    VentasMesContainer.innerText = '$ ' + ventasMes(parseInt(ventasMesId.value), parseInt(ventasAnioId.value)) + ',°°';
 });
 ventasAnioId.addEventListener('change', () => {
     const VentasMesContainer = document.getElementById('ventas-mes-container');
 
-    VentasMesContainer.innerText = 'Total= $ ' + ventasMes(parseInt(ventasMesId.value), parseInt(ventasAnioId.value));
+    VentasMesContainer.innerText = '$ ' + ventasMes(parseInt(ventasMesId.value), parseInt(ventasAnioId.value)) + ',°°';
 });
 
 const ventasVendedora = (nombre) => {
@@ -223,7 +212,7 @@ const ventasSucursal = (sucursal) => {
     ventasSucursal.forEach((venta) => {
         totalSucursal += precioMaquina(venta.componentes);
     });
-    return totalSucursal;
+    return `$ ${totalSucursal} ,°°`;
 };
 
 const ventasSucursalId = document.getElementById('ventas-sucursal');
@@ -296,9 +285,11 @@ const render = () => {
 const lista = document.getElementById('ventas');
 const crearElementoLista = local.ventas.map((venta) => {
     const nuevoElementoLista = document.createElement('li');
-    nuevoElementoLista.setAttribute('class', 'row');
+    nuevoElementoLista.classList.add('class', 'row');
+    nuevoElementoLista.classList.add('class', 'item');
+
     let nuevoNodo = `
-    <div class="col-md-4">${venta.fecha.getDate()} / ${nombreMes(venta.fecha.getMonth())} / ${venta.fecha.getFullYear()}</div>
+    <div class="col-md-4">${nombreMes(venta.fecha.getMonth())}   ${venta.fecha.getDate()}   ${venta.fecha.getFullYear()}</div>
     <div class="col-md-2">${venta.nombreVendedora}</div>
     <div class="col-md-6">${venta.componentes}</div>
 `;
@@ -361,9 +352,11 @@ const agregarVentasNuevas = (e) => {
     console.log(local.ventas);
 
     const nuevoElementoLista = document.createElement('li');
-    nuevoElementoLista.setAttribute('class', 'row');
+    nuevoElementoLista.classList.add('class', 'row');
+    nuevoElementoLista.classList.add('class', 'item');
+
     let nuevoNodo = `
-    <div class="col-md-4">${new Date().getDate()}/ ${nombreMes(new Date().getMonth())}/ ${new Date().getFullYear()}</div>
+    <div class="col-md-4">${nombreMes(new Date().getMonth())}   ${new Date().getDate()}   ${new Date().getFullYear()}</div>
     <div class="col-md-2">${nombreVendedora}</div>
     <div class="col-md-6">${componentes}</div>
 `;
